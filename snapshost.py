@@ -2,7 +2,7 @@ import os
 import subprocess
 
 os.system('cat /dev/null > /tmp/poolist.txt')
-Server_list = ['wpsun464']
+Server_list = ['server_name']
 pool_list = []
 for i in Server_list:
     os.system('zpool list | grep -i %s'%(i) + ' | awk "{print \$1}" >> /tmp/poolist.txt')
